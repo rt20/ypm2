@@ -345,10 +345,10 @@ if (isset($_POST['addppbarangkeluar'])){
 	$barangnya = $_POST['barangnya'];
 	$penerima = $_POST['penerima'];
 	$qty = $_POST['qty'];
-	$nopp = $_POST['nopp'];
-	$keterangan = $_POST['keterangan'];
+	// $nopp = $_POST['nopp'];
+	// $keterangan = $_POST['keterangan'];
 
-	$addtokeluar = mysqli_query($conn,"insert into pp (idbarang, penerima, qty, nopp, keterangan, status) values ('$barangnya', '$penerima', '$qty', '$nopp', '$keterangan', 'PENDING')");
+	$addtokeluar = mysqli_query($conn,"insert into pp (idbarang, penerima, qty, status) values ('$barangnya', '$penerima', '$qty', 'PENDING')");
 
 };
 
